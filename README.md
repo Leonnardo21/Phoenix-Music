@@ -7,3 +7,4 @@ Stage 1
 
 Stage 2
 - [x]Refactor: Create an object to save the player's status, functionality and configuration
+- [x]Implemented function that plays next song in the list

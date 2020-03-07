@@ -3,16 +3,24 @@ window.player = {
     title: document.querySelector(".card-content h5"),
     artist: document.querySelector(".artist"),
     audio: document.querySelector("audio"),
-    data: {
-       title: "Boneless (Delirious)",
-       artist: "Steve Aoki, Chris Lake, Tujamo & Kid Ink",
-       cover: "files/feel-the-beat.jpg",
-       file: "files/Boneless.mp3"
-   },
-   start() {
-       this.cover.style.background = `url(${this.data.cover}) no-repeat center center / cover`;
-       this.title.innerText = this.data.title;
-       this.artist.innerText = this.data.artist;
-       this.audio.src = this.data.file;
-   }
+    audioData: audios,
+    currentAudio: {},
+    currentPlaying: 0,
+    start() {
+        this.update();
+        this.audio.onended = () => this.next();
+    },
+    next() {
+        this.currentPlaying++;
+        this.update();
+        this.audio.play();
+    },
+    update() {
+        this.currentAudio = this.audioData[this.currentPlaying];
+
+        this.cover.style.background = `url('${path(this.currentAudio.cover)}') no-repeat center center / cover`;
+        this.title.innerText = this.currentAudio.title;
+        this.artist.innerText = this.currentAudio.artist;
+        this.audio.src = path(this.currentAudio.file);
+    }
 }

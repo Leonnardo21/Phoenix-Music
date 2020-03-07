@@ -4,7 +4,7 @@ window.audios = [
       "Boneless (Delirious)",
       artist: "Steve Aoki, Chris Lake, Tujamo & Kid Ink",
     cover: "feel-the-beat.jpg",
-    file: "boneless.mp3"
+    file: "Boneless.mp3"
   },
   {
     title: "Desiigner",
