@@ -1,7 +1,7 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css";
 
-body{
+body {
     height: 100vh;
     background-color: #efefef;
     display: flex;
@@ -9,21 +9,21 @@ body{
     justify-content: center;
 }
 
-#player{
+#player {
     background-color: white;
     width: 90%;
     max-width: 375px;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-    0px 3px 1px -2px rgba(0, 0, 0, 1),
-    0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+        0px 3px 1px -2px rgba(0, 0, 0, 1),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-.card{
+.card {
     box-shadow: none;
     margin: 0;
 }
 
-h4{
+h4 {
     color: #cf000f;
     font-size: 20px;
     font-weight: bold;
@@ -34,7 +34,12 @@ h4{
     padding: 12px;
 }
 
-.card-image{
+.card-image {
     background: url("https://placehold.it/500") no-repeat center center / cover;
     height: 200px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 30px;
 }
