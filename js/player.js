@@ -37,7 +37,7 @@ export default {
     setVolume(value) {
         this.audio.volume = value / 100;
     },
-    setSeek(value) {
+    setSeekBar(value) {
         this.audio.currentTime = value;
     },
     next() {
@@ -46,7 +46,6 @@ export default {
         this.update();
         this.play();
     },
-    //To fix seekbar
     timeUpdate() {
         this.currentDuration.innerText = secondsToMinutes(this.audio.currentTime);
         this.seekBarControl.value = this.audio.currentTime;
