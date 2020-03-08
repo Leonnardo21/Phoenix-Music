@@ -11,5 +11,5 @@ Stage 2
 - [x]Implemented function that arrives at the last song on the list, returns the first
 
 Stage 3
-- [x]Implemented function that plays next song in the list
 - [x]Player customization started
+- [x]implemented functionalities for the buttons (play, pause, mute and seekbar)
