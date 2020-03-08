@@ -12,11 +12,8 @@ window.player = {
     },
     next() {
         this.currentPlaying++;
-        if(this.currentPlaying == this.audioData.length){
-            this.restart();
-        }
+        if(this.currentPlaying == this.audioData.length) this.restart();
         this.update();
-        this.audio.play();
     },
     update() {
         this.currentAudio = this.audioData[this.currentPlaying];
@@ -29,4 +26,5 @@ window.player = {
         this.currentPlaying = 0;
         this.update();
     }
+    
 }

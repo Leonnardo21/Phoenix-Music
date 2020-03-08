@@ -1,6 +1,10 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css";
 
+:root{
+    --primary: #cf000f;
+}
+
 body {
     height: 100vh;
     background-color: #efefef;
@@ -24,7 +28,7 @@ body {
 }
 
 h4 {
-    color: #cf000f;
+    color: var(--primary);
     font-size: 20px;
     font-weight: bold;
     display: flex;
@@ -42,4 +46,24 @@ h4 {
 audio {
     width: 100%;
     margin-top: 30px;
+}
+
+#play-pause{
+    background-color: var(--primary);
+}
+
+#vol{
+    color: var(--primary);
+}
+
+input[type = "range"]::-webkit-slider-thumb{
+    background-color: var(--primary);
+}
+
+input[type = "range"]::-moz-range-thumb{
+    background-color: var(--primary);
+}
+
+input[type = "range"]::-ms-thumb{
+    background-color: var(--primary);
 }
