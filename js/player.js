@@ -1,5 +1,8 @@
 import audios from "./data.js";
-import { path, secondsToMinutes } from "./utils.js";
+import {
+    path,
+    secondsToMinutes
+} from "./utils.js";
 import elements from "./playerElements.js"
 export default {
     audioData: audios,
@@ -34,7 +37,7 @@ export default {
     setVolume(value) {
         this.audio.volume = value / 100;
     },
-    setSeekBar(value) {
+    setSeek(value) {
         this.audio.currentTime = value;
     },
     next() {
@@ -46,7 +49,7 @@ export default {
     //To fix seekbar
     timeUpdate() {
         this.currentDuration.innerText = secondsToMinutes(this.audio.currentTime);
-        this.seekbar.value = this.audio.currentTime;
+        this.seekBarControl.value = this.audio.currentTime;
     },
     update() {
         this.currentAudio = this.audioData[this.currentPlaying];
@@ -54,16 +57,12 @@ export default {
         this.title.innerText = this.currentAudio.title;
         this.artist.innerText = this.currentAudio.artist;
         elements.createAudioElement.call(this, path(this.currentAudio.file));
-
         this.audio.onloadeddata = () => {
             elements.actions.call(this);
         }
-
-
     },
     restart() {
         this.currentPlaying = 0;
         this.update();
     }
-
 }

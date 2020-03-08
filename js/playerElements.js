@@ -1,7 +1,4 @@
-import {
-    secondsToMinutes
-} from "./utils.js";
-
+import { secondsToMinutes } from "./utils.js";
 export default {
     get() {
         this.cover = document.querySelector(".card-image");
